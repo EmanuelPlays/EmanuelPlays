@@ -7,3 +7,4 @@
 - SpuderSCP https://discord.gg/xRzknn62bF (IT)
 - i make something so you will eventually see it on a branch
 
+[![Discord Presence](https://lanyard.cnrad.dev/api/:1185938854360907809)](https://discord.com/users/:1185938854360907809)
