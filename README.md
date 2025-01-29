@@ -1,6 +1,5 @@
 ## Hi there 👋
 
-- I make bots for free with a limit (10 custom cmd)
 - Well here is my link to socials: https://mboost.me/a/dAV
 - Contact me: EmanuelPlays@proton.me
 - My discord is emanuelplaysofficial, if you want the id: 1185938854360907809
