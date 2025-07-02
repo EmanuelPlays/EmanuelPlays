@@ -15,4 +15,4 @@ Here are some ideas to get you started:
 
 Programming Languages that i know:
 
-[Programming Languages](https://i.imgur.com/alOyClX.png)
+![Programming Languages](https://i.imgur.com/alOyClX.png)
