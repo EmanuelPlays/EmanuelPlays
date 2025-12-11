@@ -1,12 +1,9 @@
 ## Hi there 👋
 
 
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ryxohub
+- 🔭 I’m currently working on pytoexeconverter
 - 🌱 I’m currently learning lua
-- 🤔 I’m looking for help with italian translations
+- 🤔 I’m looking to help with italian translations
 - 📫 How to reach me: emanuelplays@proton.me
 - 😄 Pronouns: he/him
 
