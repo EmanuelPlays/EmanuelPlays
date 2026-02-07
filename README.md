@@ -1,15 +1,26 @@
-## Hi there 👋
+# 👋 Hey, I'm **EmanuelPlays**
 
 
-- 🔭 I’m currently working on pytoexeconverter
-- 🌱 I’m currently learning lua
-- 🤔 I’m looking to help with italian translations
-- 📫 How to reach me: emanuelplays@proton.me
-- 😄 Pronouns: he/him
 
-  [![Discord Presence](https://lanyard.cnrad.dev/api/1185938854360907809)](https://discord.com/users/1185938854360907809)
+### 🔥 Language Badges  
+```md
+![Languages](https://img.shields.io/badge/All_Languages-Mastered-6A5ACD?style=for-the-badge)
+![Coding](https://img.shields.io/badge/Code-∞-FF1493?style=for-the-badge)
+```
 
+## 🛠️ Tech & Tools I Use  
+```md
+![Tools](https://img.shields.io/badge/Tools-Cinematic%20%7C%20Tactical%20%7C%20Modular-00CED1?style=for-the-badge)
+![Forge](https://img.shields.io/badge/Forge-1.20.1-FF4500?style=for-the-badge)
+![UI](https://img.shields.io/badge/UI-Tactical%20HUDs-1E90FF?style=for-the-badge)
+![IDE](https://www.jetbrains.com/idea/download/?section=windows)
+```
 
-Programming Languages that i know:
+## 🎯 What I Build  
+- Minecraft Mods
+- Python Stuff
 
-![Programming Languages](https://i.imgur.com/alOyClX.png)
+## 🌐 Connect With Me  
+- Discord: emanuelplaysofficial 
+- Website: Not yet
+- Portfolio: In da works
