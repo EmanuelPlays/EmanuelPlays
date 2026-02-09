@@ -20,5 +20,5 @@
 - Portfolio: In da works
 
 ## 🌐 Languages that i Speak
-ITALIAN🟥⬜🟩 (native)
-ENGLISH🌎
+- ITALIAN🟥⬜🟩 (native)
+- ENGLISH🌎
