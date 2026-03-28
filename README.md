@@ -13,7 +13,7 @@
 
 ## 💻 OS i use
 ![Fedora 44 KDE Plasma](https://img.shields.io/badge/Fedora%2044-KDE%20Plasma-1D99F3?style=flat&logo=fedora&logoColor=white) 
-![Windows 12 Insider](https://img.shields.io/badge/Windows%2012-Insider-0078D6?style=flat&logo=windows&logoColor=white)
+[![Windows 11](https://custom-icon-badges.demolab.com/badge/Windows-0078D6?logo=windows11&logoColor=white)](#)
 
 
 
