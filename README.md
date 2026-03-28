@@ -13,6 +13,7 @@
 
 ## 💻 OS i use
 ![Fedora 44 KDE Plasma](https://img.shields.io/badge/Fedora%2044-KDE%20Plasma-1D99F3?style=flat&logo=fedora&logoColor=white)
+
 ![Windows 11](https://img.shields.io/badge/Windows-11-0078D6?style=flat&logo=windows&logoColor=white)
 
 
