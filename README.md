@@ -25,7 +25,6 @@
 ## 🌐 Connect With Me  
 - Discord: emanuelplaysofficial 
 - Website: Not yet
-- Portfolio: In da works
 
 ## 🌐 Languages that i Speak
 - ITALIAN🟥⬜🟩 (native)
