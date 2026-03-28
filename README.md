@@ -10,20 +10,11 @@
 
 ## 🛠️ Tech & Tools I Use  
 ![IntelliJ IDEA](https://img.shields.io/badge/IntelliJIDEA-000000.svg?style=for-the-badge&logo=intellij-idea&logoColor=white)
-<svg xmlns="http://www.w3.org/2000/svg" width="198" height="28" role="img">
-  <linearGradient id="s" x2="0" y2="100%">
-    <stop offset="0" stop-color="#bbb" stop-opacity=".1"/>
-    <stop offset="1" stop-opacity=".1"/>
-  </linearGradient>
-  <rect width="110" height="28" fill="#294172"/>
-  <rect x="110" width="188" height="28" fill="#1D99F3"/>
-  <rect width="198" height="28" fill="url(#s)"/>
-  <g fill="#fff" text-anchor="middle"
-     font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="13">
-    <text x="55" y="19">Fedora 44</text>
-    <text x="154" y="19">KDE Plasma</text>
-  </g>
-</svg>
+
+## 💻 OS i use
+![Fedora 44 KDE Plasma](https://img.shields.io/badge/Fedora%2044-KDE%20Plasma-1D99F3?style=flat&logo=fedora&logoColor=white)
+![Windows 11](https://img.shields.io/badge/Windows-11-0078D6?style=flat&logo=windows&logoColor=white)
+
 
 
 ## 🎯 What I Build  
