@@ -12,7 +12,7 @@
 ![IntelliJ IDEA](https://img.shields.io/badge/IntelliJIDEA-000000.svg?style=for-the-badge&logo=intellij-idea&logoColor=white)
 
 ## 💻 OS i use
-![Fedora 44 KDE Plasma](https://img.shields.io/badge/Fedora%2044-KDE%20Plasma-1D99F3?style=flat&logo=fedora&logoColor=white) 
+[![KDE Plasma](https://img.shields.io/badge/KDE%20Plasma-1D99F3?logo=kdeplasma&logoColor=fff)](#)
 [![Windows 11](https://custom-icon-badges.demolab.com/badge/Windows-0078D6?logo=windows11&logoColor=white)](#)
 
 
