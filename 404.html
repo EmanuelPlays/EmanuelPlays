@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | EmanuelPlaysDev</title>
+    <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/EmanuelPlays/AboutMe/About-Me/favicon.ico">
+    <link rel="stylesheet" href="css/main.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        :root {
+            --primary: #6366f1;
+            --secondary: #8b5cf6;
+            --bg-dark: #0f172a;
+            --bg-card: #1e293b;
+            --text: #f1f5f9;
+            --text-muted: #94a3b8;
+            --error: #ef4444;
+            --success: #22c55e;
+            --warning: #f59e0b;
+        }
+
+        body {
+            font-family: 'Poppins', monospace;
+            background: var(--bg-dark);
+            color: var(--text);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background-image: 
+                radial-gradient(ellipse at top left, rgba(99, 102, 241, 0.1) 0%, transparent 50%),
+                radial-gradient(ellipse at bottom right, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+        }
+
+        .container {
+            max-width: 500px;
+            width: 100%;
+        }
+
+        .error-header {
+            text-align: center;
+            margin-bottom: 25px;
+            animation: glitch 2s infinite;
+        }
+
+        .error-code {
+            font-size: clamp(60px, 15vw, 100px);
+            font-weight: 900;
+            color: var(--error);
+            text-shadow: 0 0 20px rgba(239, 68, 68, 0.5);
+            line-height: 1;
+        }
+
+        .error-message {
+            font-size: clamp(14px, 3vw, 18px);
+            color: var(--text-muted);
+            margin-top: 8px;
+        }
+
+        .error-details {
+            background: var(--bg-card);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .details-header {
+            background: rgba(239, 68, 68, 0.1);
+            padding: 10px 15px;
+            border-bottom: 1px solid rgba(239, 68, 68, 0.2);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .details-header h2 {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--error);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .details-header .dot {
+            width: 6px;
+            height: 6px;
+            background: var(--error);
+            border-radius: 50%;
+            animation: pulse-dot 1s infinite;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1px;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .info-box {
+            background: var(--bg-card);
+            padding: 12px 14px;
+        }
+
+        .info-box.fulll {
+            grid-column: 1 / -1;
+        }
+
+        .info-box h3 {
+            font-size: 10px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+        }
+
+        .info-box h3::before {
+            content: '>';
+            color: var(--primary);
+            font-weight: bold;
+            margin-right: 4px;
+        }
+
+        .info-box .value {
+            font-size: 13px;
+            color: var(--text);
+            word-break: break-all;
+            font-family: 'Courier New', monospace;
+        }
+
+        .info-box .value.loading {
+            color: var(--warning);
+            animation: blink 1s infinite;
+        }
+
+        /* Spoiler Button */
+        .spoiler-btn {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 12px;
+            background: rgba(245, 158, 11, 0.15);
+            border: 1px solid var(--warning);
+            color: var(--warning);
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-family: inherit;
+        }
+
+        .spoiler-btn:hover {
+            background: rgba(245, 158, 11, 0.25);
+        }
+
+        .spoiler-btn.revealed {
+            background: rgba(34, 197, 94, 0.15);
+            border-color: var(--success);
+            color: var(--success);
+        }
+
+        .spoiler-content {
+            display: none;
+        }
+
+        .spoiler-content.visible {
+            display: inline;
+        }
+
+        /* Warning Popup */
+        .warning-popup {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: rgba(245, 158, 11, 0.15);
+            border: 1px solid var(--warning);
+            border-radius: 8px;
+            padding: 12px 16px;
+            max-width: 280px;
+            animation: slideIn 0.3s ease;
+            z-index: 1000;
+        }
+
+        .warning-popup h4 {
+            color: var(--warning);
+            font-size: 12px;
+            margin-bottom: 6px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .warning-popup p {
+            color: var(--text-muted);
+            font-size: 11px;
+            line-height: 1.4;
+        }
+
+        .warning-popup .close-btn {
+            position: absolute;
+            top: 5px;
+            right: 8px;
+            background: none;
+            border: none;
+            color: var(--text-muted);
+            cursor: pointer;
+            font-size: 16px;
+            line-height: 1;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+
+        @keyframes slideOut {
+            from { transform: translateX(0); opacity: 1; }
+            to { transform: translateX(100%); opacity: 0; }
+        }
+
+        .actions {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border: none;
+            font-family: inherit;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(99, 102, 241, 0.4);
+        }
+
+        .btn-secondary {
+            background: var(--bg-card);
+            color: var(--text);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        @keyframes glitch {
+            0%, 90%, 100% { transform: translate(0); }
+            92% { transform: translate(-2px, 1px); }
+            94% { transform: translate(2px, -1px); }
+            96% { transform: translate(-1px, 2px); }
+            98% { transform: translate(1px, -2px); }
+        }
+
+        @keyframes pulse-dot {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.3; }
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        @media (max-width: 500px) {
+            .info-grid { grid-template-columns: 1fr; }
+            .warning-popup { 
+                left: 10px; 
+                right: 10px;
+                max-width: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Warning Popup -->
+    <div class="warning-popup" id="warningPopup">
+        <button class="close-btn" onclick="closeWarning()">×</button>
+        <h4>⚠️ Privacy Notice</h4>
+        <p>The system diagnostic panel may display your IP address. This is normal - we don't log or store anything. No fault will be given!</p>
+    </div>
+
+    <div class="container">
+        <div class="error-header">
+            <div class="error-code">404</div>
+            <p class="error-message">Page not found.</p>
+        </div>
+
+        <div class="error-details">
+            <div class="details-header">
+                <span class="dot"></span>
+                <h2>System Diagnostics</h2>
+            </div>
+            
+            <div class="info-grid">
+                <div class="info-box">
+                    <h3>Platform</h3>
+                    <div class="value" id="platform">-</div>
+                </div>
+                
+                <div class="info-box">
+                    <h3>Screen</h3>
+                    <div class="value" id="screen">-</div>
+                </div>
+                
+                <div class="info-box">
+                    <h3>Viewport</h3>
+                    <div class="value" id="viewport">-</div>
+                </div>
+                
+                <div class="info-box">
+                    <h3>Online</h3>
+                    <div class="value" id="online">-</div>
+                </div>
+                
+                <div class="info-box">
+                    <h3>CPU Cores</h3>
+                    <div class="value" id="cores">-</div>
+                </div>
+                
+                <div class="info-box">
+                    <h3>Memory</h3>
+                    <div class="value" id="memory">-</div>
+                </div>
+                
+                <div class="info-box">
+                    <h3>Language</h3>
+                    <div class="value" id="language">-</div>
+                </div>
+                
+                <div class="info-box">
+                    <h3>Timezone</h3>
+                    <div class="value" id="timezone">-</div>
+                </div>
+                
+                <div class="info-box">
+                    <h3>IP Address</h3>
+                    <div>
+                        <button class="spoiler-btn" id="spoilerBtn" onclick="revealIP()">
+                            <span id="spoilerIcon">👁</span>
+                            <span id="spoilerText">Reveal IP</span>
+                        </button>
+                        <span class="spoiler-content" id="ipContent">
+                            <span class="value loading" id="public-ip">Fetching...</span>
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="info-box">
+                    <h3>Fingerprint</h3>
+                    <div class="value" id="fingerprint">-</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="actions">
+            <a href="index.html" class="btn btn-primary">
+                <span>⌂</span>
+                Go Home
+            </a>
+            <a href="./" class="btn btn-secondary">
+                <span>↻</span>
+                Retry
+            </a>
+        </div>
+    </div>
+
+    <script src="js/system-info.js"></script>
+    <script>
+// Auto-search for index.html (only on button click)
+        async function searchAndRedirect() {
+            const possiblePaths = ['index.html', './index.html', '../index.html'];
+            for (const path of possiblePaths) {
+                try {
+                    const res = await fetch(path, { method: 'HEAD' });
+                    if (res.ok) {
+                        window.location.href = path;
+                        return;
+                    }
+                } catch (e) { continue; }
+            }
+            // Fallback to index.html if not found
+            window.location.href = 'index.html';
+        }
+        
+        function closeWarning() {
+            const popup = document.getElementById('warningPopup');
+            popup.style.animation = 'slideOut 0.3s ease forwards';
+            setTimeout(() => popup.remove(), 300);
+        }
+        
+        function revealIP() {
+            const btn = document.getElementById('spoilerBtn');
+            const content = document.getElementById('ipContent');
+            const icon = document.getElementById('spoilerIcon');
+            const text = document.getElementById('spoilerText');
+            const ipEl = document.getElementById('public-ip');
+            
+            if (!content.classList.contains('visible')) {
+                content.classList.add('visible');
+                btn.classList.add('revealed');
+                text.textContent = 'Hide IP';
+                icon.textContent = '🙈';
+                
+                // Fetch IP
+                window.SystemInfo.getIPInfo().then(ipInfo => {
+                    if (ipInfo.ip && ipInfo.ip !== 'Unable to fetch') {
+                        ipEl.textContent = ipInfo.ip;
+                        ipEl.classList.remove('loading');
+                    } else {
+                        ipEl.textContent = 'Blocked';
+                        ipEl.classList.remove('loading');
+                    }
+                });
+            } else {
+                content.classList.remove('visible');
+                btn.classList.remove('revealed');
+                text.textContent = 'Reveal IP';
+                icon.textContent = '👁';
+            }
+        }
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            const info = window.SystemInfo.getSystemInfo();
+            
+            document.getElementById('platform').textContent = info.platform;
+            document.getElementById('screen').textContent = info.screenWidth + 'x' + info.screenHeight;
+            document.getElementById('viewport').textContent = window.innerWidth + 'x' + window.innerHeight;
+            document.getElementById('online').textContent = info.onLine ? 'Online' : 'Offline';
+            document.getElementById('online').style.color = info.onLine ? 'var(--success)' : 'var(--error)';
+            document.getElementById('cores').textContent = window.SystemInfo.getCPUCores();
+            document.getElementById('memory').textContent = window.SystemInfo.getMemoryInfo();
+            document.getElementById('language').textContent = info.language;
+document.getElementById('timezone').textContent = info.timezone;
+            document.getElementById('fingerprint').textContent = '0x' + window.SystemInfo.getBrowserFingerprint();
+            
+            // Don't auto-redirect - wait for button press
+        });
+    </script>
+</body>
+</html>

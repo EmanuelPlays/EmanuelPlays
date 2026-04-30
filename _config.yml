@@ -1,0 +1,23 @@
+# GitHub Pages Configuration
+
+title: EmanuelPlaysDev - About Me
+description: Hey, I'm EmanuelPlaysDev. A developer who builds Minecraft mods and Python stuff.
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Theme
+theme: jekyll-theme-minimal
+
+# Exclude unnecessary files
+exclude:
+  - node_modules/
+  - package*.json
+  - yarn.lock
+  - .gitignore
+  - README.md
+  - script.js
+  - styles.css

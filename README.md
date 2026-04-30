@@ -24,9 +24,9 @@
 
 ## 🌐 Connect With Me  
 - Discord: emanuelplaysofficial 
-- Website: Not yet
+- Website:
+- Email: EmanuelPlays@proton.me
 
 ## 🌐 Languages that i Speak
 - ITALIAN🟥⬜🟩 (native)
 - ENGLISH🌎 
-[![Discord Presence](https://lanyard.cnrad.dev/api/1185938854360907809)](https://discord.com/users/1185938854360907809)

@@ -1,0 +1,16 @@
+/* Main CSS Entry Point - Imports all modular CSS files */
+
+/* Import all CSS modules */
+@import url('./variables.css');
+@import url('./base.css');
+@import url('./animations.css');
+@import url('./header.css');
+@import url('./sections.css');
+@import url('./footer.css');
+@import url('./responsive.css');
+
+/* 
+ * This file serves as the main entry point that imports
+ * all modular CSS files for better organization
+ * and maintainability.
+ */

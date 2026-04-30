@@ -1,0 +1,119 @@
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    :root {
+        --font-size-4xl: 2rem;
+        --font-size-2xl: 1.25rem;
+        --spacing-lg: 24px;
+        --spacing-xl: 32px;
+    }
+    
+    .container {
+        padding: var(--spacing-lg) var(--spacing-sm);
+    }
+    
+    .header h1 {
+        font-size: var(--font-size-4xl);
+    }
+    
+    .discord-avatar {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .avatar::before {
+        width: 130px;
+        height: 130px;
+    }
+    
+    section {
+        padding: var(--spacing-md);
+    }
+    
+    .badges {
+        justify-content: center;
+    }
+    
+    .build-items, 
+    .connect-items, 
+    .language-items {
+        justify-content: center;
+    }
+    
+    .build-item,
+    .connect-item,
+    .language-item {
+        padding: 10px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --font-size-4xl: 1.75rem;
+        --font-size-2xl: 1.125rem;
+        --font-size-lg: 1rem;
+        --spacing-md: 16px;
+    }
+    
+    .header h1 {
+        font-size: var(--font-size-4xl);
+    }
+    
+    .tagline {
+        font-size: var(--font-size-base);
+    }
+    
+    .discord-avatar {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .avatar::before {
+        width: 110px;
+        height: 110px;
+    }
+    
+    section {
+        padding: var(--spacing-sm);
+        margin-bottom: var(--spacing-sm);
+    }
+    
+    section h2 {
+        font-size: var(--font-size-lg);
+    }
+    
+    .badge img {
+        height: 25px;
+    }
+    
+    .build-item,
+    .connect-item,
+    .language-item {
+        padding: 8px 14px;
+        font-size: var(--font-size-sm);
+    }
+    
+    footer {
+        padding: var(--spacing-md);
+        font-size: var(--font-size-sm);
+    }
+}
+
+/* Fix for section hover transform in responsive */
+@media (hover: none) {
+    section:hover {
+        transform: none;
+    }
+    
+    .badge:hover {
+        transform: none;
+    }
+    
+    .discord-avatar:hover {
+        transform: none;
+    }
+    
+    .connect-item:hover {
+        transform: none;
+    }
+}
