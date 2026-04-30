@@ -24,7 +24,8 @@
 
 ## 🌐 Connect With Me  
 - Discord: emanuelplaysofficial 
-- Website: Not yet
+- Website:
+- Email: EmanuelPlays@proton.me
 
 ## 🌐 Languages that i Speak
 - ITALIAN🟥⬜🟩 (native)
