@@ -1,32 +1,15 @@
-# 👋 Hey, I'm **EmanuelPlaysDev**
+<div align="center">
+  
+  ## 👋 Hello!
 
+  I'm a dev from Italy.
 
+  [![](https://skillicons.dev/icons?i=ts,nuxt,vue,python,java)](https://skillicons.dev)
+  
+  [![](https://skillicons.dev/icons?i=github,nodejs,git,vscode,windows)](https://skillicons.dev)
+  
 
-### 🔥 Languages that i know 
-[![Python](https://img.shields.io/badge/Python-3776AB?logo=python&logoColor=fff)](#)
-[![HTML](https://img.shields.io/badge/HTML-%23E34F26.svg?logo=html5&logoColor=white)](#)
-[![CSS](https://img.shields.io/badge/CSS-639?logo=css&logoColor=fff)](#)
-[![Java](https://img.shields.io/badge/Java-%23ED8B00.svg?logo=openjdk&logoColor=white)](#)
-
-## 🛠️ Tech & Tools I Use  
-[![IntelliJ IDEA](https://img.shields.io/badge/IntelliJIDEA-000000.svg?logo=intellij-idea&logoColor=white)](#)
-[![PyCharm](https://img.shields.io/badge/PyCharm-000?logo=pycharm&logoColor=fff)](#)
-## 💻 OS i use
-[![Windows 11](https://custom-icon-badges.demolab.com/badge/Windows-0078D6?logo=windows11&logoColor=white)](#)
-
-
-
-
-
-## 🎯 What I Build  
-- Minecraft Mods
-- Python Stuff
-
-## 🌐 Connect With Me  
-- Discord: emanuelplaysofficial 
-- Website:
-- Email: EmanuelPlays@proton.me
-
-## 🌐 Languages that i Speak
-- ITALIAN🟥⬜🟩 (native)
-- ENGLISH🌎 
+  ![](https://raw.githubusercontent.com/EmanuelPlays/github-stats-transparent/output/generated/overview.svg)
+  ![](https://raw.githubusercontent.com/EmanuelPlays/github-stats-transparent/output/generated/languages.svg)
+  
+</div>
